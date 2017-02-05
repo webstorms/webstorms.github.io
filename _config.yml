@@ -1,3 +1,2 @@
 markdown: redcarpet
-baseurl: /webstorms.github.io
 exclude: ['README.md']

@@ -16,6 +16,7 @@ $$
 &= \frac{2}{2} + \frac{5}{2} = 3.5\\ 
 \end{aligned}
 $$ 
+
 Et voila! It's the same answer. Let's take a look at a more challenging problem.
 
 **Dice role payout problem**: Let's play a game where we roll a die and we get paid the outcome. If the outcome is $1, 2, 3$ the game ends. If the outcome is $4, 5, 6$ we get to roll again. What is the expected payout of this game?
@@ -28,6 +29,7 @@ $$
 &= 7\\
 \end{aligned}
 $$ 
+
 Here we include the expectation in the second term as we get to play the game again.
 
 **Noodles in a bowl problem**: Let's say we have $N$ noodles in a bowl. We randomly select one noodle end and randomly select another noodle end and connect them. We continue doing so until we have connected all noodle ends. What is the expected number of noodle-loops that are formed using this process?
@@ -45,4 +47,5 @@ $$
 &= \mathbb{E}[R-1] + \frac{1}{2N-1}\\
 \end{aligned}
 $$
+
 This gives us a recursive formula for calculating the number of expected noodle-loops! Bon appetit.

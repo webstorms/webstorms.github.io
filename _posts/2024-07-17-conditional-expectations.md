@@ -39,14 +39,16 @@ Here we include the expectation in the second term as we get to play the game ag
 This problem appears pretty daunting at first but it has a simple solution using conditional expectations. Let's consider connecting the last noodle which has two disoint events of 1. connecting with another noodle and 2. self-connecting. We can then write the expectation as follows:
 
 $$
-\begin{aligned} \mathbb{E}[R] &= \mathbb{E}[R | \text{$N^{th}$ noodle does not self-connect}]Pr(\text{$N^{th}$ noodle does not self-connect}) + \mathbb{E}[R | \text{$N^{th}$ noodle does self-connect}]Pr(\text{$N^{th}$ noodle does self-connect}) \\ 
+\begin{aligned} \mathbb{E}[R] &= \mathbb{E}[R | \text{$N^{th}$ noodle does not self-connect}]Pr(\text{$N^{th}$ noodle does not self-connect})\\
+&+ \mathbb{E}[R | \text{$N^{th}$ noodle does self-connect}]Pr(\text{$N^{th}$ noodle does self-connect}) \\ 
 \end{aligned}
 $$
 
 The probability of the $N^{th}$ noodle self-connecting can be calculated as follows: for $N$ noodles there are $2N$ noodle ends. If we select one of these ends there remain $2N-1$ noodle ends to choose from with one end that results in a self-connection, hence $Pr(\text{$N^{th}$ noodle does self-connect})=\frac{1}{2N-1}$ and $Pr(\text{$N^{th}$ noodle does not self-connect}) = 1 - Pr(\text{$N^{th}$ noodle does self-connect})$.
 
 $$
-\begin{aligned} \mathbb{E}[R] &= \mathbb{E}[R | \text{$N^{th}$ noodle does not self-connect}]Pr(\text{$N^{th}$ noodle does not self-connect}) + \mathbb{E}[R | \text{$N^{th}$ noodle does self-connect}]Pr(\text{$N^{th}$ noodle does self-connect}) \\ 
+\begin{aligned} \mathbb{E}[R] &= \mathbb{E}[R | \text{$N^{th}$ noodle does not self-connect}]Pr(\text{$N^{th}$ noodle does not self-connect})\\
+&+ \mathbb{E}[R | \text{$N^{th}$ noodle does self-connect}]Pr(\text{$N^{th}$ noodle does self-connect}) \\ 
 &= \mathbb{E}[R-1](1 - \frac{1}{2N-1}) + (\mathbb{E}[R-1] + 1)\frac{1}{2N-1}\\
 &= \mathbb{E}[R-1] + \frac{1}{2N-1}\\
 \end{aligned}

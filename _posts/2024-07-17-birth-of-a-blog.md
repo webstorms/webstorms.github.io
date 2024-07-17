@@ -1,0 +1,5 @@
+## Birth of a blog
+
+It's been on the to-do list for a while to get back into blogging. I used to run a blog called [robotscode.wordpress.com](https://robotscode.wordpress.com) during my undergraduate which sort of fizzled over time. Now I've finished my PhD and thought it would be worthwhile to get back into blogging to continue the practice of writing, formalizing and sharing ideas. 
+
+Unfortunately, WordPress does not support latex (/mathjax) unless you opt into purchasing a 40-dollar monthly subscription. Feels like there is a market opportunity here to create a simple blogging platform that allows things like writing math equations! I thought about extending scholarcrafter.com (an online personal CV-like page builder I made) with blogging functionality, but extra-time on my hands is becoming more scarce, especially as I'm trying to push a few more papers and scouting the job market. Anyway, it seems like it's pretty easy to get up and running with a simple GitHub-hosted blog. Time to get writing!

@@ -2,7 +2,10 @@
 
 Over the past year, I’ve been learning CUDA to squeeze out more performance from GPUs and to get a better idea of how GPUs work. Indeed, it’s been a great learning challenge! Unfortunately, there are many more things to consider when writing CUDA kernels than just thinking about the algorithm you are trying to implement. For example, how you are going to structure your grids and blocks, or if you are going to use shared memory or not. I don’t regret learning more about CUDA, but oh boy do I wish I would have taken the leap to learn Tritan sooner!
 
-![Kernel Performance](/docs/assets/gpu_meme.jpg)
+<!-- ![Kernel Performance](/docs/assets/gpu_meme.jpg) -->
+<div align="center">
+<img src="/docs/assets/gpu_meme.jpg" width="150" height="auto">
+</div>
 
 Tritan - as advertised by [OpenAI](https://openai.com/index/triton/) - is a new GPU programming language that is a lot simpler to work with than CUDA and gives you pretty amazing performance without much fine-tuning. In comparison, there is a lot of fine-tuning required when trying to squeeze out more performance from CUDA kernels. For example, if you write your own matrix multiplication kernels, they will likely be 10-20x slower than proprietary highly-optimized matrix kernels - even when using shared memory. Believe me, I’ve tried. Look at Simon Boehm’s amazing [blog post](https://siboehm.com/articles/22/CUDA-MMM) for a deep dive into the iterative process of optimizing CUDA kernel for matrix multiplication to get a better idea. In comparison, the third [tutorial](https://triton-lang.org/main/getting-started/tutorials/03-matrix-multiplication.html#sphx-glr-getting-started-tutorials-03-matrix-multiplication-py) on Tritan’s tutorial page shows you how to write a matrix multiplication kernel that is on par with torch.matmul without many crazy optimizations!
 

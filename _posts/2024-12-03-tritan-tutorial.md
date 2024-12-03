@@ -64,5 +64,5 @@ def add(x: torch.Tensor, y: torch.Tensor, pid_dim=1, BLOCK_SIZE=32):
 After running the benchmarks I was surprised to see that without much optimization the kernel performed equally well to the default torch addition kernel! Intriguingly, the performance of the 1d-grid-kernel was better than the 2d-grid kernel on an RTX 3090 GPU, yet the performances were more similar on an A100 GPU. If there are any Tritan wizards out there, please feel free to let me know why!
 
 <div align="center">
-<img src="/docs/assets/kernel_performance.png" width="400" height="auto">
+<img src="/docs/assets/kernel_performance.png" width="auto" height="auto">
 </div>

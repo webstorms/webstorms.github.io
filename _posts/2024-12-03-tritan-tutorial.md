@@ -2,7 +2,7 @@
 
 Over the past year, I’ve been learning CUDA to squeeze out more performance from GPUs and to get a better idea of how GPUs work. Indeed, it’s been a great learning challenge! Unfortunately, there are many more things to consider when writing CUDA kernels than just thinking about the algorithm you are trying to implement. For example, how you are going to structure your grids and blocks, or if you are going to use shared memory or not. I don’t regret learning more about CUDA, but oh boy do I wish I would have taken the leap to learn Tritan sooner!
 
-[MEME]
+![Kernel Performance](/docs/assets/gpu_meme.jpg)
 
 Tritan - as advertised by [OpenAI](https://openai.com/index/triton/) - is a new GPU programming language that is a lot simpler to work with than CUDA and gives you pretty amazing performance without much fine-tuning. In comparison, there is a lot of fine-tuning required when trying to squeeze out more performance from CUDA kernels. For example, if you write your own matrix multiplication kernels, they will likely be 10-20x slower than proprietary highly-optimized matrix kernels - even when using shared memory. Believe me, I’ve tried. Look at Simon Boehm’s amazing [blog post](https://siboehm.com/articles/22/CUDA-MMM) for a deep dive into the iterative process of optimizing CUDA kernel for matrix multiplication to get a better idea. In comparison, the third [tutorial](https://triton-lang.org/main/getting-started/tutorials/03-matrix-multiplication.html#sphx-glr-getting-started-tutorials-03-matrix-multiplication-py) on Tritan’s tutorial page shows you how to write a matrix multiplication kernel that is on par with torch.matmul without many crazy optimizations!
 
@@ -61,4 +61,4 @@ def add(x: torch.Tensor, y: torch.Tensor, pid_dim=1, BLOCK_SIZE=32):
 
 After running the benchmarks I was surprised to see that without much optimization the kernel performed equally well to the default torch addition kernel! Intriguingly, the performance of the 1d-grid-kernel was better than the 2d-grid kernel on an RTX 3090 GPU, yet the performances were more similar on an A100 GPU. If there are any Tritan wizards out there, please feel free to let me know why!
 
-![Kernel Performance](/assets/kernel_performance.png)
+![Kernel Performance](/docs/assets/kernel_performance.png)
